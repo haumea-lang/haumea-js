@@ -1,0 +1,35 @@
+{
+  "name": "haumea-js",
+  "version": "0.0.1",
+  "description": "Haumea to JavaScript compiler",
+  "main": "haumea.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haumea-lang/haumea-js.git"
+  },
+  "bin": {
+    "haumeajs": "haumea.js"
+  },
+  "keywords": [
+    "haumea",
+    "lang",
+    "language",
+    "easy",
+    "experimental"
+  ],
+  "author": "@nanalan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haumea-lang/haumea-js/issues"
+  },
+  "homepage": "https://github.com/haumea-lang/haumea-js#readme",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "ms": "^0.7.2",
+    "nearley-make": "^1.0.0"
+  }
+}
