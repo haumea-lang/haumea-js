@@ -4,7 +4,7 @@
 
 # haumea-js
 > [Haumea](https://github.com/haumea-lang/haumea) to JavaScript compiler
-> **Browser-only for the moment!**
+> **Node.js-only for the moment!** Browser support coming _soon_.
 
 Haumea is an experimental language designed to be easy to learn and use. [More](https://github.com/haumea-lang/haumea) | [Spec](https://github.com/haumea-lang/haumea/wiki)
 
