@@ -3,3 +3,5 @@ to main with (string stdin) do
 
   display("Hello, " + place)
 end
+
+to foo display("bar")

@@ -18,11 +18,14 @@ signature -> "(" _ (typeid __ ident (_ "," _ typeid __ ident):*):? _ ")" {% d =>
   return args
 } %}
 
-statements -> statement (__ | _ ";" _) statements {% d => {
-  d[2].push(d[0])
-  return d[2]
+statements -> (statement (__ | _ ";" _)):* statement {% d => {
+  let ss = d[0].map(p => p[0])
+  let s = d[1]
+
+  ss.push(s)
+
+  return ss
 } %}
-            | statement {% d => d[0] %}
 
 statement -> "return" __ expression {% (d) => [token.RETURN, d[2]] %}
            | "if" __ expression __ "then" __ statement {% (d) => [token.IF, d[2], d[6]] %}

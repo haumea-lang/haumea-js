@@ -38,15 +38,17 @@ program
       const then = Date.now()
 
       const trees = parser.feed(input).results
-      const out = compile(trees[0])
+      const out = compile(trees[0], function panic(err) {
+        console.error(chalk.red(chalk.bold('Fatal error: ') + err))
+        process.exit(1)
+      })
 
       try {
         fs.writeFileSync(program.output, out, 'utf8')
         const time = Date.now() - then
         console.log(chalk.green(chalk.bold('Done ') + 'in ' + ms(time)))
       } catch (e) {
-        console.error(chalk.red(chalk.bold('Fatal error: ') + `failed to write output file ${chalk.white(file)}: ${e.code}`))
-        process.exit(1)
+        panic(`failed to write output file ${chalk.white(file)}: ${e.code}`)
       }
     }
   })
