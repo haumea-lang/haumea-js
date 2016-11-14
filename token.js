@@ -1,4 +1,16 @@
 module.exports = {
+  FUNCTION: Symbol('function'),
+  COMMENT: Symbol('comment'),
+  VARIABLE: Symbol('variable'),
+  DECLARATION: Symbol('declaration'),
+
+  EQUALS: Symbol('='),
+  ADD: Symbol('+'),
+  SUBTRACT: Symbol('-'),
+  DIVIDE: Symbol('/'),
+  MULTIPLY: Symbol('*'),
+  POWER: Symbol('^'),
+
   RETURN: Symbol('return'),
   IF: Symbol('if'),
   IFELSE: Symbol('ifelse'),
@@ -9,4 +21,9 @@ module.exports = {
   FOREVER: Symbol('forever'),
   WHILE: Symbol('while'),
   FOREACH: Symbol('foreach'),
+
+  INTEGER: Symbol('integer'),
+  FLOAT: Symbol('float'),
+  STRING: Symbol('string'),
+  NONE: Symbol('none'),
 }

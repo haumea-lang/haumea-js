@@ -1,1 +1,5 @@
-to main display(25)
+to main with (string stdin) do
+  set string place to "World"
+
+  display("Hello, " + place)
+end
