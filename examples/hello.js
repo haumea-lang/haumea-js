@@ -1,6 +1,5 @@
 function main(stdin) {
-  var place
-  place = "World"
+  var place = "World"
   console.log("Hello, " + place)
 }
 

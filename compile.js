@@ -59,11 +59,11 @@ module.exports = function compile(tree, panic) {
       const is_declaration = d[1][0][0] === DECLARATION
 
       if (is_declaration) {
-        statement(d[1][0])
+        add(`var `)
         d[1] = d[1][0][2]
       }
 
-      add(`${gen(d[1])} = ${expression(d[2])}\n`)
+      add(`${gen(d[1])} = ${expression(d[2])}\n`, is_declaration)
     } else {
       panic(`Unknown statement type`)
     }
